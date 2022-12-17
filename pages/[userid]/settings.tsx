@@ -2,7 +2,7 @@ import React from "react";
 import Sidebar from "../components/Sidebar";
 import Link from "next/link";
 
-const Settings = () => {
+const SettingsPage = () => {
   const user = {
     firstName: "Tom",
     lastName: "Smith",
@@ -119,4 +119,4 @@ const Settings = () => {
   );
 };
 
-export default Settings;
+export default SettingsPage;

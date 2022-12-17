@@ -1,9 +1,10 @@
 import React from "react";
-import Sidebar from "../components/Sidebar";
-import MyCourses from "../components/MyCourses";
-import Navbar from "../components/Navbar";
+import Sidebar from "../../components/Sidebar";
+import MyCourses from "../../components/MyCourses";
+import Navbar from "../../components/Navbar";
+import PrismaClient from "@prisma/client";
 
-function Dashboard() {
+function UserDashboardPage() {
   const user = {
     firstName: "Tom",
     lastName: "Smith",
@@ -21,4 +22,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard;
+export default UserDashboardPage;

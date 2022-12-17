@@ -3,13 +3,20 @@ import { FaUser } from "react-icons/fa";
 import { FaReceipt } from "react-icons/fa";
 import { FaCog } from "react-icons/fa";
 import Link from "next/link";
+import { PrismaClient } from "@prisma/client";
+const prisma = new PrismaClient();
 
 function Sidebar() {
+  async function handle(req, res) {
+    const users = await prisma.user.findMany();
+    console.log(res.json(users));
+  }
   const user = {
     firstName: "Tom",
     lastName: "Smith",
     email: "tomsmith@email.com",
   };
+
   return (
     <>
       <div

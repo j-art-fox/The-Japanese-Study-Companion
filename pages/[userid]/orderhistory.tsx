@@ -1,7 +1,7 @@
 import React from "react";
-import Sidebar from "../components/Sidebar";
+import Sidebar from "../../components/Sidebar";
 
-function OrderHistory() {
+function OrderHistoryPage() {
   const user = {
     firstName: "Tom",
     lastName: "Smith",
@@ -38,4 +38,4 @@ function OrderHistory() {
   );
 }
 
-export default OrderHistory;
+export default OrderHistoryPage;

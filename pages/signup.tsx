@@ -2,7 +2,7 @@ import AccountCreation from "../components/AccountCreation";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
-function Signup() {
+function SignUpPage() {
   return (
     <>
       <Navbar />
@@ -12,4 +12,4 @@ function Signup() {
   );
 }
 
-export default Signup;
+export default SignUpPage;

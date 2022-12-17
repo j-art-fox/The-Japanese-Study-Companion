@@ -2,7 +2,7 @@ import Footer from "../components/Footer";
 import { LoginComp } from "../components/LoginComp";
 import Navbar from "../components/Navbar";
 
-function Login() {
+function LoginPage() {
   return (
     <div>
       <Navbar />
@@ -12,4 +12,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default LoginPage;
