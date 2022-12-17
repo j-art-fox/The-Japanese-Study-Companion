@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 
 function Navbar() {
   const [isActive, setActive] = useState(true);
-  const [isLoggedIn, setLoggedIn] = useState(false);
+  const [isLoggedIn, setLoggedIn] = useState(true);
 
   const handleLogIn = () => {
     setLoggedIn(!isLoggedIn);

@@ -1,3 +1,9 @@
+// Your prisma instance will be your interface to the database when you want to read and write data in it.
+//You can for example create a new User record by calling prisma.user.create()
+// or retrieve all the Post records from the database with prisma.post.findMany().
+//For an overview of the full Prisma Client API, visit the Prisma docs.
+// Now you can replace the hardcoded feed object in getStaticProps inside index.tsx with a proper call to the database:
+
 import Link from "next/link";
 
 function AccountCreation() {
