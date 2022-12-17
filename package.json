@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "save": "git add -A && git commit -m jringsakabe contributed to the project && git push && npm run dev"
+    "save": "git add -A && git commit -m jringsakabe_contributed:_to_the_project && git push && npm run dev"
   },
   "repository": {
     "type": "git",
