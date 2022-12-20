@@ -1,7 +1,6 @@
 import Link from "next/link";
 import React from "react";
-
-import prisma from '../../lib/prisma';
+import prisma from "../../lib/prisma";
 
 export const getStaticProps = async () => {
   const courses = await prisma.course.findMany({
@@ -9,7 +8,7 @@ export const getStaticProps = async () => {
       title: true,
       description: true,
       id: true,
-    }
+    },
   });
   return {
     props: { courses },
@@ -33,7 +32,9 @@ const CoursesHomePage = ({ courses }) => {
               {course.title}
             </Link>
             <br />
-            <span className="text-2xl text-green-500">{course.description}</span>
+            <span className="text-2xl text-green-500">
+              {course.description}
+            </span>
           </li>
         ))}
       </ul>
