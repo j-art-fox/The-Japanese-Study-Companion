@@ -10,25 +10,112 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Post {
-  id        String  @id @default(cuid())
-  title     String
-  content   String?
-  published Boolean @default(false)
-  author    User?   @relation(fields: [authorId], references: [id])
-  authorId  String?
+model User {
+  id         String      @id @default(cuid())
+  password   String
+  firstName  String
+  lastName   String
+  email      String
+  avatar     String?
+  stripeData StripeData? @relation(fields: [stripeDataId], references: [id])
+
+  createdAt    DateTime @default(now()) @map(name: "created_at")
+  updatedAt    DateTime @updatedAt @map(name: "updated_at")
+  stripeDataId String?
+
+  // Note: You're occasionally using `@map`and`@@map`to map some field and model names to different column and table names in the underlying database.
+  // This is because NextAuth.js has some specialrequirements for calling things in your database a certain way.
+  @@map(name: "users")
 }
 
-model User {
-  id        String   @id @default(cuid())
-  firstName String
-  lastName  String
-  email     String
+// Holds all courses
+model Curriculum {
+  id          String           @id @default(cuid())
+  title       String
+  description String
+  tags        CurriculumTags[]
+
   createdAt DateTime @default(now()) @map(name: "created_at")
   updatedAt DateTime @updatedAt @map(name: "updated_at")
-  posts     Post[]
-  avatar    String
+}
 
-  //Note: You're occasionally using `@map`and`@@map`to map some field and model names to different column and table names in the underlying database. This is because NextAuth.js has some specialrequirements for calling things in your database a certain way.
-  @@map(name: "users")
+model Course {
+  id          String   @id @default(cuid())
+  title       String
+  description String
+  lessons     Lesson[]
+
+  createdAt DateTime @default(now()) @map(name: "created_at")
+  updatedAt DateTime @updatedAt @map(name: "updated_at")
+}
+
+model Lesson {
+  id              String             @id @default(cuid())
+  title           String
+  description     String
+  knowledgePieces PiecesForLessons[]
+  lessonOrder     LessonOrder?
+  course          Course?            @relation(fields: [courseId], references: [id])
+  courseId        String?
+  lessonOrderId   String
+}
+
+model LessonOrder {
+  id                  String   @id @default(cuid())
+  lesson              Lesson   @relation(fields: [lessonId], references: [id])
+  lessonId            String   @unique
+  knowledgePieceOrder String[] // order of knowledge pieces
+}
+
+model KnowledgePiece {
+  id           String             @id @default(cuid())
+  lessons      PiecesForLessons[]
+  contentPiece ContentPiece?
+  assessments  Assessment[]
+}
+
+model ContentPiece {
+  id               String         @id @default(cuid())
+  content          String? // Markdown
+  knowledgePiece   KnowledgePiece @relation(fields: [knowledgePieceId], references: [id])
+  knowledgePieceId String         @unique
+}
+
+model Assessment {
+  id               String         @id @default(cuid())
+  knowledgePiece   KnowledgePiece @relation(fields: [knowledgePieceId], references: [id])
+  knowledgePieceId String
+}
+
+model PiecesForLessons {
+  lesson           Lesson         @relation(fields: [lessonId], references: [id])
+  lessonId         String
+  knowledgePiece   KnowledgePiece @relation(fields: [knowledgePieceId], references: [id])
+  knowledgePieceId String
+
+  @@id([lessonId, knowledgePieceId])
+}
+
+// Filtering and finding curriculums
+model Tag {
+  id         String           @id @default(cuid())
+  name       String
+  curriculum CurriculumTags[]
+}
+
+model CurriculumTags {
+  curriculum   Curriculum @relation(fields: [curriculumId], references: [id])
+  curriculumId String
+  tag          Tag        @relation(fields: [tagId], references: [id])
+  tagId        String
+
+  @@id([curriculumId, tagId])
+}
+
+model StripeData {
+  id         String   @id @default(cuid())
+  customerId String
+  createdAt  DateTime @default(now()) @map(name: "created_at")
+  updatedAt  DateTime @updatedAt @map(name: "updated_at")
+  User       User[]
 }
