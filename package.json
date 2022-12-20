@@ -10,6 +10,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "seed": "npx prisma db seed && npx prisma studio",
+    "migrate": "npx prisma migrate dev --name 'reset'&& npx prisma db push",
     "save": "git add -A && git commit -m jringsakabe_contributed:_to_the_project && git push && npm run dev"
   },
   "repository": {

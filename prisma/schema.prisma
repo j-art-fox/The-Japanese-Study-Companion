@@ -41,7 +41,7 @@ model Curriculum {
 
 model Course {
   id          String   @id @default(cuid())
-  title       String
+  title       String   @unique
   description String
   lessons     Lesson[]
 
@@ -55,8 +55,8 @@ model Lesson {
   description     String
   knowledgePieces PiecesForLessons[]
   lessonOrder     LessonOrder?
-  course          Course?            @relation(fields: [courseId], references: [id])
-  courseId        String?
+  course          Course?            @relation(fields: [courseTitle], references: [title])
+  courseTitle     String?
   lessonOrderId   String
 }
 
