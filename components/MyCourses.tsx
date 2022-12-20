@@ -3,7 +3,7 @@ import { FaChevronRight } from "react-icons/fa";
 import Link from "next/link";
 const logo = "test logo";
 
-function MyCourses() {
+function MyCoursesComponent() {
   const user = {
     firstName: "Tom",
     lastName: "Smith",
@@ -21,11 +21,10 @@ function MyCourses() {
                   &nbsp;Welcome back {user.firstName}!
                 </h1>
                 <p className="lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-base font-roboto">
-                  <span className="font-bold">Pro tip: </span>They say the key
-                  to success in studies is{" "}
-                  <span className="italic">consistency.</span> Try to study at
-                  the same time each day and each week. Then you're studying
-                  will become a regular part of your routien and life.
+                  <span className="font-bold">Pro tip: </span>The key to success
+                  in studies is <span className="italic">consistency.</span> Try
+                  to study at the same time each day and each week. Then you're
+                  studying will become a regular part of your routien and life.
                 </p>
               </div>
               <div></div>
@@ -64,4 +63,4 @@ function MyCourses() {
   );
 }
 
-export default MyCourses;
+export default MyCoursesComponent;

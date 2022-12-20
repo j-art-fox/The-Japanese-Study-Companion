@@ -1,12 +1,12 @@
 import Footer from "../components/Footer";
-import { LoginComp } from "../components/LoginComp";
+import { LoginComponent } from "../components/LoginComp";
 import Navbar from "../components/Navbar";
 
 function LoginPage() {
   return (
     <div>
       <Navbar />
-      <LoginComp />
+      <LoginComponent />
       <Footer />
     </div>
   );

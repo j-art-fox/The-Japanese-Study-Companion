@@ -1,5 +1,5 @@
 import React from "react";
-export function LoginComp({}) {
+export function LoginComponent({}) {
   return (
     <div>
       <section className="text-zinc-600 body-font relative">

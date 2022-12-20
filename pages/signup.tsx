@@ -1,12 +1,12 @@
-import AccountCreation from "../components/AccountCreation";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import AccountCreationComponent from "../components/AccountCreation";
 
 function SignUpPage() {
   return (
     <>
       <Navbar />
-      <AccountCreation />
+      <AccountCreationComponent />
       <Footer />
     </>
   );

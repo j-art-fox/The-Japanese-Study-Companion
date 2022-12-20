@@ -6,7 +6,7 @@
 
 import Link from "next/link";
 
-function AccountCreation() {
+function AccountCreationComponent() {
   return (
     <div>
       <div className="text-zinc-600 body-font relative">
@@ -118,4 +118,4 @@ function AccountCreation() {
   );
 }
 
-export default AccountCreation;
+export default AccountCreationComponent;

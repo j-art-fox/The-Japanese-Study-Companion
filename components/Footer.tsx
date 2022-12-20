@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
 
-const Footer = () => {
+const FooterComponent = () => {
   const [isLoggedIn, setLoggedIn] = useState(false);
 
   const handleLogIn = () => {
@@ -217,4 +217,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default FooterComponent;

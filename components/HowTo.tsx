@@ -2,7 +2,7 @@ import React from "react";
 import { FaChevronRight } from "react-icons/fa";
 import Link from "next/link";
 
-export function HowTo({}) {
+export function HowToComponent({}) {
   return (
     <section className="my-10 flex flex-col justify-center items-center w-screen">
       <div className="my-10">

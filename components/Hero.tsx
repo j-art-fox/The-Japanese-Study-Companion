@@ -2,7 +2,7 @@ import { FaChevronRight } from "react-icons/fa";
 import React, { useState } from "react";
 import Link from "next/link";
 
-export default function Hero() {
+export default function HeroComponent() {
   const [isLoggedIn, setLoggedIn] = useState(true);
   const handleLogIn = () => {
     setLoggedIn(!isLoggedIn);

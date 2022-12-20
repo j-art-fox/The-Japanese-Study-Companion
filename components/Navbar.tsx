@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
-function Navbar() {
+function NavbarComponent() {
   const [isActive, setActive] = useState(true);
   const [isLoggedIn, setLoggedIn] = useState(true);
 
@@ -222,4 +222,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default NavbarComponent;
