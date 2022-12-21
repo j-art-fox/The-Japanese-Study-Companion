@@ -2,15 +2,106 @@ const lessonData = [
   {
     title: "What is Japanese Script?",
     description:
-      "Learn about the background behind the Japanese Writing Systems",
-    courseTitle: "Japanese Script",
+      "By the end of this lesson, you'll know the background behind the Japanese Writing Systems. You'll learn what Romaji is. Additionally, you'll understand the difference between Hiragana, Katakana, and Kanji, and how to best study the Japanese writing systems.",
+    courseId: "Japanese Script",
     lessonOrderId: "test",
   },
   {
-    title: "What is Japanese Script?",
+    title: "Romaji",
     description:
-      "Learn about the background behind the Japanese Writing Systems",
-    courseTitle: "Japanese Script",
+      "By the end of this lesson, you'll know how to read and write Japanese using Romaji.",
+    courseId: "Japanese Script",
+    lessonOrderId: "test",
+  },
+  {
+    title: "Hiragana 1: あ～お",
+    description:
+      "By the end of this lesson, you'll know what is meant by the word 'kana' and how to read and write the first five characters of Hiragana.",
+    courseId: "Japanese Script",
+    lessonOrderId: "test",
+  },
+  {
+    title: "Hiragana 2: か～こ",
+    description:
+      "By the end of this lesson, you'll know how to read and write the first ten characters of Hiragana.",
+    courseId: "Japanese Script",
+    lessonOrderId: "test",
+  },
+  {
+    title: "Hiragana 3: The Dakuten and が～ご",
+    description:
+      "By the end of this lesson, you'll know what the diacritical marks known as a 'dakuten' modify a Hiragana character, as well as how to read and write the first fifteen characters of Hiragana.",
+    courseId: "Japanese Script",
+    lessonOrderId: "test",
+  },
+  {
+    title: "Hiragana 4: さ～そ and ざ～ぞ",
+    description:
+      "By the end of this lesson, you'll have picked up the pace and learned how to read and write 10 additional Hiragana characters.",
+    courseId: "Japanese Script",
+    lessonOrderId: "test",
+  },
+  {
+    title: "Hiragana 5: た～と and だ～ど",
+    description:
+      "By the end of this lesson, you'll know how to read and write 10 additional Hiragana characters.",
+    courseId: "Japanese Script",
+    lessonOrderId: "test",
+  },
+  {
+    title: "Hiragana 6: な～の",
+    description:
+      "By the end of this lesson, you'll know how to read and write five additional Hiragana characters.",
+    courseId: "Japanese Script",
+    lessonOrderId: "test",
+  },
+  {
+    title: "Hiragana 7: How to type in Hiragana",
+    description:
+      "By the end of this lesson, you'll know how to type using Hiragana characters on a computer or smart device.",
+    courseId: "Japanese Script",
+    lessonOrderId: "test",
+  },
+  {
+    title: "Hiragana 8: は～ほ, ば～ぼ, The Handakuten, and ぱ～ぽ",
+    description:
+      "By the end of this lesson, you'll know what the Handakuten is and how it influences this group of Hiragana giving us 15 new Hiragana characters.",
+    courseId: "Japanese Script",
+    lessonOrderId: "test",
+  },
+  {
+    title: "Hiragana 9: ま～も and や～よ",
+    description:
+      "By the end of this lesson, you'll be able to read and write eight additional Hiragana characters.",
+    courseId: "Japanese Script",
+    lessonOrderId: "test",
+  },
+  {
+    title: "Hiragana 10: ら~ろ、わ、を、and ん",
+    description:
+      "By the end of this lesson, you'll be able to read and the final eight Hiragana characters.",
+    courseId: "Japanese Script",
+    lessonOrderId: "test",
+  },
+  {
+    title: "Hiragana 11: The Youon Diagraphs: 'small ゃ、ゅ、ょ'",
+    description:
+      "By the end of this lesson, you'll understand what the Youon diagraphs are and how to read and write them.",
+    courseId: "Japanese Script",
+    lessonOrderId: "test",
+  },
+  {
+    title: "Hiragana 12: Hiragana Review",
+    description:
+      "This segment's content is designed to help prepare you for the Hiragana Assessment.",
+    courseId: "Japanese Script",
+    lessonOrderId: "test",
+  },
+  {
+    title: "Hiragana 13: Assessment",
+    description:
+      "This assessment quizzes examinees ability to read, comprehend, and recognize the characters of the Hiragana writing system.",
+    courseId: "Japanese Script",
     lessonOrderId: "test",
   },
 ];

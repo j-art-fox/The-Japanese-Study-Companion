@@ -31,19 +31,22 @@ model User {
 // Holds all courses
 model Curriculum {
   id          String           @id @default(cuid())
-  title       String
+  title       String           @unique
   description String
   tags        CurriculumTags[]
+  course      Course[]
 
   createdAt DateTime @default(now()) @map(name: "created_at")
   updatedAt DateTime @updatedAt @map(name: "updated_at")
 }
 
 model Course {
-  id          String   @id @default(cuid())
-  title       String   @unique
-  description String
-  lessons     Lesson[]
+  id              String      @id @default(cuid())
+  title           String      @unique
+  description     String
+  lessons         Lesson[]
+  curriculum      Curriculum? @relation(fields: [curriculumTitle], references: [title])
+  curriculumTitle String?
 
   createdAt DateTime @default(now()) @map(name: "created_at")
   updatedAt DateTime @updatedAt @map(name: "updated_at")
@@ -55,8 +58,8 @@ model Lesson {
   description     String
   knowledgePieces PiecesForLessons[]
   lessonOrder     LessonOrder?
-  course          Course?            @relation(fields: [courseTitle], references: [title])
-  courseTitle     String?
+  course          Course?            @relation(fields: [courseId], references: [id])
+  courseId        String?
   lessonOrderId   String
 }
 
